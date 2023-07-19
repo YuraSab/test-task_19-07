@@ -1,0 +1,56 @@
+.main{
+    padding: 100px;
+    width: calc(100% - 300px);
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 100px;
+}
+
+
+.titleArea{
+    height: 40px;
+}
+
+.completed{
+    width: 40px;
+    height: 40px;
+    border: 2px black solid;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0 20px 0;
+}
+.deleted{
+    width: 44px;
+    height: 44px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0 20px 0;
+}
+.deleted:hover{
+    background: red;
+}
+
+button{
+    margin: 40px 0;
+    width: 240px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px cornflowerblue solid;
+    border-radius: 4px;
+    font-size: 18px;
+}
+
+label{
+    margin-bottom: 10px;
+}
+
+.inputDate{
+    width: 200px;
+    height: 30px;
+}

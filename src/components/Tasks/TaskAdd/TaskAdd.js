@@ -22,6 +22,7 @@ const TaskAdd = () => {
                     1,
                 title,
                 description,
+                completed: false,
                 addDate: new Date().toLocaleString().split(',')[0],
                 dueDate: date,
             }));
@@ -42,6 +43,7 @@ const TaskAdd = () => {
                 onChange={(event) => setDescription(event.target.value)}
                 rows={5}
                 maxLength={400}
+                style={{width: 800}}
             />
             <h5>Date</h5>
             <input
