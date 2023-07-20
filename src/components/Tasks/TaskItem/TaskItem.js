@@ -17,7 +17,7 @@ const TaskItem = ({task}) => {
                         <label>Add date</label>
                     </div>
                     <div>
-                        <div style={{color: task.dueDate > actualDate ? "black" : "red"}}>{task.dueDate}</div>
+                        <div style={{color: task.dueDate >= actualDate ? "black" : "red"}}>{task.dueDate}</div>
                         <label>Due date</label>
                     </div>
                 </div>

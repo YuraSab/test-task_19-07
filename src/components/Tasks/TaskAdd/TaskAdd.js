@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import {onAddTask} from "../../../redux/action-creators";
 import styles from "./TaskAdd.module.css";
+import FilterDateInput from "../../../ui/FilterDateInput/FilterDateInput";
 
 const TaskAdd = () => {
 
@@ -46,11 +47,9 @@ const TaskAdd = () => {
                 style={{width: 800}}
             />
             <h5>Date</h5>
-            <input
-                className={styles.inputDate}
-                type={"date"}
-                onChange={(event) => setDate(event.target.value.toLocaleString().split('-').reverse().join('.'))}
-            /><br/>
+
+            <FilterDateInput setFilterDate={setDate}/><br/>
+
             <button onClick={() => handleAddTask()}>Add task</button>
         </div>
     );

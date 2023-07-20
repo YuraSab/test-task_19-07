@@ -1,0 +1,11 @@
+.customButton{
+    margin: 40px 0;
+    width: 240px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px cornflowerblue solid;
+    border-radius: 4px;
+    font-size: 18px;
+}
