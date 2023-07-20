@@ -7,6 +7,7 @@ import styles from "./TaskList.module.css";
 import {useSearchParams} from "react-router-dom";
 import SearchAndFilter from "../../SearchAndFilter/SearchAndFilter";
 import EmptyList from "../../EmptyList/EmptyList";
+import PropTypes from "prop-types";
 
 const TaskList = ({completed}) => {
 
@@ -68,5 +69,10 @@ const TaskList = ({completed}) => {
         </div>
     );
 };
+
+
+TaskList.propTypes = {
+    completed: PropTypes.bool
+}
 
 export default TaskList;

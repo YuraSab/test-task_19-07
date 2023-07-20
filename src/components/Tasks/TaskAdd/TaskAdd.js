@@ -24,9 +24,6 @@ const TaskAdd = () => {
                 addDate: new Date().toLocaleString().split(',')[0],
                 dueDate: date,
             }));
-            setTitle("");
-            setDescription("");
-            setDate("");
         } else {
             window.alert("Please fill all fields!");
         }

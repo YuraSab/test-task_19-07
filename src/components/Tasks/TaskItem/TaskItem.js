@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from "./TaskItem.module.css";
 import {Link} from "react-router-dom";
+import PropTypes from "prop-types";
 
 const TaskItem = ({task}) => {
 
@@ -24,6 +25,10 @@ const TaskItem = ({task}) => {
             </div>
         </Link>
     );
+};
+
+TaskItem.propTypes = {
+    task: PropTypes.object
 };
 
 export default TaskItem;

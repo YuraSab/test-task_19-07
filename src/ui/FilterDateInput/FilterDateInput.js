@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from "prop-types";
 
 const FilterDateInput = ({setFilterDate}) => {
     return (
@@ -8,6 +9,10 @@ const FilterDateInput = ({setFilterDate}) => {
             style={{width: 200, height: 32}}
         />
     );
+};
+
+FilterDateInput.propTypes = {
+    setFilterDate: PropTypes.func,
 };
 
 export default FilterDateInput;

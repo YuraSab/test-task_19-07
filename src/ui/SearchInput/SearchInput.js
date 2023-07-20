@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from "prop-types";
 
 const SearchInput = ({setSearchParams}) => {
     return (
@@ -16,6 +17,10 @@ const SearchInput = ({setSearchParams}) => {
             style={{width: 300, height: 30}}
         />
     );
+};
+
+SearchInput.propType = {
+    setSearchParams: PropTypes.func,
 };
 
 export default SearchInput;

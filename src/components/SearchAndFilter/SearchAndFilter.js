@@ -3,6 +3,7 @@ import SearchInput from "../../ui/SearchInput/SearchInput";
 import FilterDateInput from "../../ui/FilterDateInput/FilterDateInput";
 import CustomButton from "../../ui/Button/CustomButton";
 import styles from "./SearchAndFliters.module.css";
+import PropTypes from "prop-types";
 
 const SearchAndFilter = ({setSearchParams, setFilterDate, handleResetFilters}) => {
     return (
@@ -19,5 +20,11 @@ const SearchAndFilter = ({setSearchParams, setFilterDate, handleResetFilters}) =
         </div>
     );
 };
+
+SearchAndFilter.propTypes = {
+    setSearchParams: PropTypes.func,
+    setFilterDate: PropTypes.func,
+    handleResetFilters: PropTypes.func,
+}
 
 export default SearchAndFilter;
