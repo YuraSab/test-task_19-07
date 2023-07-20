@@ -8,15 +8,16 @@
 .main a{
     text-decoration: none;
 }
-.active{
-    color: black;
-}
-.nonActive{
-    color: white;
-}
 .main div{
     padding: 0 100px;
     font-size: 24px;
     font-style: revert;
     font-weight: bolder;
+}
+
+.active{
+    color: black;
+}
+.nonActive{
+    color: white;
 }

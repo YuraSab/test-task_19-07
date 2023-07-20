@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import {useDispatch, useSelector} from "react-redux";
-import {onAddTask} from "../../../redux/action-creators";
 import styles from "./TaskAdd.module.css";
 import FilterDateInput from "../../../ui/FilterDateInput/FilterDateInput";
+import {onAddTask} from "../../../redux/action-creators";
 
 const TaskAdd = () => {
 
@@ -12,7 +12,6 @@ const TaskAdd = () => {
 
     const {tasks} = useSelector( ({tasks: {tasks}}) => ({tasks}) );
     const dispatch = useDispatch();
-
 
     const handleAddTask = () => {
         if (title && description && date) {

@@ -1,6 +1,6 @@
 import React from 'react';
-import styles from "./CustomButton.module.css";
 import PropTypes from "prop-types";
+import styles from "./CustomButton.module.css";
 
 const CustomButton = ({onClick, caption}) => {
     return (

@@ -1,19 +1,19 @@
 import React, {useState} from 'react';
-import {useSelector} from "react-redux";
-import TaskItem from "../TaskItem/TaskItem";
-import TaskAdd from "../TaskAdd/TaskAdd";
-import PlusBlackPlus from "../../../assets/icons/plus_black_icon.png";
-import styles from "./TaskList.module.css";
 import {useSearchParams} from "react-router-dom";
+import {useSelector} from "react-redux";
+import PropTypes from "prop-types";
+import styles from "./TaskList.module.css";
 import SearchAndFilter from "../../SearchAndFilter/SearchAndFilter";
 import EmptyList from "../../EmptyList/EmptyList";
-import PropTypes from "prop-types";
+import TaskAdd from "../TaskAdd/TaskAdd";
+import TaskItem from "../TaskItem/TaskItem";
+import PlusBlackPlus from "../../../assets/icons/plus_black_icon.png";
 
 const TaskList = ({completed}) => {
 
     const [addTaskActive, setAddTaskActive] = useState(false);
-    const [searchParams, setSearchParams] = useSearchParams();
     const [filterDate, setFilterDate] = useState("");
+    const [searchParams, setSearchParams] = useSearchParams();
 
     const {tasks} = useSelector( ({tasks: {tasks}}) => ({tasks}) );
 
@@ -57,7 +57,8 @@ const TaskList = ({completed}) => {
                             let filter = searchParams.get("filter");
                             if (!filter) return true;
                             let title = task.title.toLowerCase();
-                            return title.includes(filter.toLowerCase());
+                            let description = task.description.toLowerCase();
+                            return title.includes(filter.toLowerCase()) || description.includes(filter.toLowerCase());
                         })
                         .filter((task) => {
                             if (!filterDate) return true;

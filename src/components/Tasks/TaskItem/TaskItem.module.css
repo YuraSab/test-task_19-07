@@ -8,10 +8,12 @@
     grid-template-rows: 25% 50% 25%;
     grid-template-columns: 100%;
 }
+
 a{
     color: black;
     text-decoration: none;
 }
+
 .title{
     font-weight: bold;
     font-size: 18px;

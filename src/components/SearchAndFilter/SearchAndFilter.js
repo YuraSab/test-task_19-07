@@ -1,22 +1,16 @@
 import React from 'react';
+import PropTypes from "prop-types";
+import styles from "./SearchAndFliters.module.css";
 import SearchInput from "../../ui/SearchInput/SearchInput";
 import FilterDateInput from "../../ui/FilterDateInput/FilterDateInput";
 import CustomButton from "../../ui/Button/CustomButton";
-import styles from "./SearchAndFliters.module.css";
-import PropTypes from "prop-types";
 
 const SearchAndFilter = ({setSearchParams, setFilterDate, handleResetFilters}) => {
     return (
         <div className={styles.main}>
-            <div>
                 <SearchInput setSearchParams={setSearchParams}/>
-            </div>
-            <div>
                 <FilterDateInput setFilterDate={setFilterDate}/>
-            </div>
-            <div>
                 <CustomButton onClick={handleResetFilters} caption={"Reset filters"}/>
-            </div>
         </div>
     );
 };

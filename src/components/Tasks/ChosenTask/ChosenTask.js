@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react';
-import styles from "./ChosenTask.module.css";
 import {useParams, useNavigate} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
-import DoneIcon from "../../../assets/icons/done_black_icon.png";
+import styles from "./ChosenTask.module.css";
 import DeleteBlackIcon from "../../../assets/icons/delete_black_icon.png";
+import DoneIcon from "../../../assets/icons/done_black_icon.png";
 import {onDeleteTask, onEditTask} from "../../../redux/action-creators";
 
 
@@ -45,7 +45,7 @@ const ChosenTask = () => {
     const handleDelete = () => {
         dispatch(onDeleteTask(chosenTask.id));
         navigate('/tasks');
-    }
+    };
 
     const handleEdit = () => {
         if (title && description) {
@@ -57,8 +57,11 @@ const ChosenTask = () => {
                 addDate: chosenTask.addDate,
                 dueDate: date,
             }));
+            alert("Changes saved!");
+        } else {
+            alert("Please fill all fields!");
         }
-    }
+    };
 
     if (chosenTask)
 

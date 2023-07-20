@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from "./TaskItem.module.css";
 import {Link} from "react-router-dom";
 import PropTypes from "prop-types";
+import styles from "./TaskItem.module.css";
 
 const TaskItem = ({task}) => {
 
