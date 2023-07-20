@@ -17,16 +17,18 @@ const TaskAdd = () => {
     const handleAddTask = () => {
         if (title && description && date) {
             dispatch(onAddTask({
-                id: tasks.length > 0 ?
-                    tasks[tasks.length - 1].id + 1
-                    :
-                    1,
+                id: tasks.length > 0 ? tasks[tasks.length - 1].id + 1 : 1,
                 title,
                 description,
                 completed: false,
                 addDate: new Date().toLocaleString().split(',')[0],
                 dueDate: date,
             }));
+            setTitle("");
+            setDescription("");
+            setDate("");
+        } else {
+            window.alert("Please fill all fields!");
         }
     };
 
