@@ -26,11 +26,22 @@ const TaskList = ({completed}) => {
         setFilterDate("");
     }
 
+    let isAnyCompleted;
+    if (completed) {
+        isAnyCompleted = !!tasks.find(task => task.completed === true);
+    }
+
+
     return (
         <div className={styles.main}>
             {
-                tasks.length > 0 &&
-                    <SearchAndFilter
+                (
+                    (tasks.length > 0 && completed === false)
+                    ||
+                    isAnyCompleted
+                )
+                &&
+                <SearchAndFilter
                         setSearchParams={setSearchParams}
                         setFilterDate={setFilterDate}
                         handleResetFilters={handleResetFilters}

@@ -1,4 +1,4 @@
-.main{
+.main {
     padding: 100px;
     width: calc(100% - 300px);
     display: grid;
@@ -7,11 +7,11 @@
 }
 
 
-.titleArea{
+.titleArea {
     height: 40px;
 }
 
-.completed{
+.completed {
     width: 40px;
     height: 40px;
     border: 2px black solid;
@@ -21,7 +21,8 @@
     align-items: center;
     margin: 10px 0 20px 0;
 }
-.deleted{
+
+.deleted {
     width: 44px;
     height: 44px;
     border-radius: 4px;
@@ -30,11 +31,12 @@
     align-items: center;
     margin: 10px 0 20px 0;
 }
-.deleted:hover{
+
+.deleted:hover {
     background: red;
 }
 
-button{
+button {
     margin: 40px 0;
     width: 240px;
     height: 45px;
@@ -46,11 +48,43 @@ button{
     font-size: 18px;
 }
 
-label{
+label {
     margin-bottom: 10px;
 }
 
-.inputDate{
+.inputDate {
     width: 200px;
     height: 30px;
+}
+
+
+@media screen and (max-width: 706px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+        width: calc(100% - 200px);
+    }
+    .titleArea {
+        width: 100%;
+    }
+    .changesActions {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .inputDate {
+        width: 100%;
+    }
+    textarea{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 445px) {
+    .main {
+        padding: 20px;
+        width: calc(100% - 40px);
+
+    }
 }

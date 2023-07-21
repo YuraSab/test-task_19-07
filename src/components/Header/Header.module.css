@@ -21,3 +21,16 @@
 .nonActive{
     color: white;
 }
+
+
+
+@media screen and (max-width: 600px){
+    .main {
+        justify-content: space-around;
+    }
+    .main:first-child{
+    }
+    .main div{
+        padding: 0;
+    }
+}

@@ -91,7 +91,7 @@ const ChosenTask = () => {
                         onChange={(event) => setDate(event.target.value.toLocaleString().split('-').reverse().join('.'))}
                     />
                 </div>
-                <div>
+                <div className={styles.changesActions}>
                     <label>Complete</label>
                     <div className={styles.completed} onClick={() => handleSetCompleted()}>
                         {chosenTask.completed && <img src={DoneIcon} alt={"done"}/>}

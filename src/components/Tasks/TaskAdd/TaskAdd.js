@@ -42,7 +42,7 @@ const TaskAdd = () => {
                 onChange={(event) => setDescription(event.target.value)}
                 rows={5}
                 maxLength={400}
-                style={{width: 800}}
+                className={styles.description}
             />
             <h5>Date</h5>
 

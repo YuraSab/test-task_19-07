@@ -9,3 +9,10 @@
     border-radius: 4px;
     font-size: 18px;
 }
+
+
+@media screen and (max-width: 697px){
+    .customButton{
+        margin: 0 0 40px 0;
+    }
+}

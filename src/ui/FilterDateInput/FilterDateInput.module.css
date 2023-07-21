@@ -1,0 +1,12 @@
+.main{
+    width: 200px;
+    height: 32px;
+}
+
+@media screen and (max-width: 697px){
+    .main{
+        width: 304px;
+        height: 36px;
+    }
+}
+
